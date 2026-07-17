@@ -28,22 +28,6 @@ secure-pickup privacy model, the shared 15-theme customization system (with
 a scroll-driven preview built from real app screenshots), and the current
 status of each project.
 
-## Running locally
-
-Any static file server works, e.g.:
-
-```sh
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/`.
-
-## Deploying
-
-Zero-build static site — deploy the repo as-is to Cloudflare Pages, GitHub
-Pages, Netlify, or any static host.
-
 ## License
 
-AGPL-3.0 (this site). The KyPost client apps are licensed separately under
-GPL-2.0 — see their individual repos.
+AGPL-3.0 — GPL-2.0
