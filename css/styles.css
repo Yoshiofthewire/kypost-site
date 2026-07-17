@@ -502,17 +502,13 @@ section {
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--line);
-  height: min(58vh, 460px);
+  aspect-ratio: 2392 / 970;
   box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.6);
 }
 
 .theme-layer {
   position: absolute;
   inset: 0;
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  background: var(--demo-bg);
-  color: var(--demo-ink-strong);
   will-change: clip-path;
 }
 
@@ -524,79 +520,27 @@ section {
   clip-path: inset(0 0 0 100%);
 }
 
-.theme-layer .demo-sidebar {
-  background: var(--demo-panel);
-  border-right: 1px solid var(--demo-line);
-  padding: 1.5rem 1.25rem;
+.theme-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.theme-layer .demo-badge {
+.theme-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--demo-accent);
-  border: 1px solid var(--demo-accent-soft);
-  display: inline-block;
-  padding: 0.3rem 0.6rem;
+  color: var(--ink-strong);
+  background: rgba(13, 15, 20, 0.72);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.65rem;
   border-radius: 999px;
-  margin-bottom: 1.25rem;
-}
-
-.theme-layer .demo-cat {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.82rem;
-  color: var(--demo-ink);
-  padding: 0.5rem 0;
-}
-
-.theme-layer .demo-cat::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--demo-accent);
-}
-
-.theme-layer .demo-main {
-  padding: 1.5rem 1.75rem;
-}
-
-.theme-layer .demo-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--demo-line);
-  font-size: 0.9rem;
-}
-
-.theme-layer .demo-row .who {
-  color: var(--demo-ink-strong);
-  font-weight: 600;
-}
-
-.theme-layer .demo-row .subj {
-  color: var(--demo-ink);
-  flex: 1;
-  margin-left: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.theme-layer .demo-compose {
-  margin-top: 1.25rem;
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  padding: 0.55rem 1rem;
-  border-radius: 8px;
-  background: var(--demo-accent);
-  color: var(--demo-button-text);
-  font-weight: 600;
 }
 
 .theme-dots {
@@ -616,82 +560,6 @@ section {
 
 .theme-dots span.active {
   background: var(--accent);
-}
-
-/* Named theme palettes for the demo layers */
-
-.theme-layer.t-patina-ky {
-  --demo-bg: #0d0f14;
-  --demo-panel: #161a22;
-  --demo-ink: #64748b;
-  --demo-ink-strong: #e2e8f0;
-  --demo-accent: #4deeea;
-  --demo-accent-soft: #0e4a48;
-  --demo-line: #1e293b;
-}
-
-.theme-layer.t-cyber-punk {
-  --demo-bg: #120918;
-  --demo-panel: #1e1028;
-  --demo-ink: #f5d0ff;
-  --demo-ink-strong: #ffe9ff;
-  --demo-accent: #00f5d4;
-  --demo-accent-soft: #3b1760;
-  --demo-line: #5c2d84;
-  --demo-button-text: #051d1a;
-}
-
-.theme-layer.t-ocean {
-  --demo-bg: #0f1b24;
-  --demo-panel: #152a36;
-  --demo-ink: #b8d8e8;
-  --demo-ink-strong: #e0f2fb;
-  --demo-accent: #5ea9be;
-  --demo-accent-soft: #214657;
-  --demo-line: #2f5567;
-  --demo-button-text: #0a1b22;
-}
-
-.theme-layer.t-forest {
-  --demo-bg: #142018;
-  --demo-panel: #1f2f24;
-  --demo-ink: #c7dbc7;
-  --demo-ink-strong: #e3f0df;
-  --demo-accent: #8faa74;
-  --demo-accent-soft: #3a5837;
-  --demo-line: #4f694f;
-  --demo-button-text: #12200f;
-}
-
-.theme-layer.t-sun {
-  --demo-bg: #fff3dc;
-  --demo-panel: #fff9ec;
-  --demo-ink: #5a4024;
-  --demo-ink-strong: #392611;
-  --demo-accent: #e0ab4f;
-  --demo-accent-soft: #f1d9a2;
-  --demo-line: #d4b27a;
-  --demo-button-text: #2a1808;
-}
-
-.theme-layer.t-polished-ky {
-  --demo-bg: #eef2f6;
-  --demo-panel: #ffffff;
-  --demo-ink: #475569;
-  --demo-ink-strong: #0f172a;
-  --demo-accent: #0891b2;
-  --demo-accent-soft: #cffafe;
-  --demo-line: #cbd5e1;
-  --demo-button-text: #042f2e;
-}
-
-.theme-layer.t-patina-ky .demo-compose,
-.theme-layer.t-cyber-punk .demo-compose,
-.theme-layer.t-ocean .demo-compose,
-.theme-layer.t-forest .demo-compose,
-.theme-layer.t-sun .demo-compose,
-.theme-layer.t-polished-ky .demo-compose {
-  color: var(--demo-button-text, #04120d);
 }
 
 /* ---------- Project lineup ---------- */
@@ -807,10 +675,6 @@ footer .wrap {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
-  .theme-layer {
-    grid-template-columns: 160px 1fr;
-  }
 }
 
 @media (max-width: 640px) {
@@ -842,12 +706,16 @@ footer .wrap {
     grid-template-columns: 1fr;
   }
 
-  .theme-layer {
-    grid-template-columns: 1fr;
+  .theme-stage {
+    margin: 0 -1.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 
-  .theme-layer .demo-sidebar {
-    display: none;
+  .theme-label {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
   }
 
   section {
