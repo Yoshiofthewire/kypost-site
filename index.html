@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KyPost — A self-hosted email ecosystem</title>
+<meta name="description" content="KyPost is a self-hosted email ecosystem: a server you run yourself, paired with native apps for Android, iOS, macOS, and Linux — with local AI sorting, PGP encryption, and shared themes.">
+<link rel="icon" type="image/png" href="assets/ky50p.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="#" class="brand">
+      <img src="assets/ky50p.png" alt="KyPost logo">
+      KyPost
+    </a>
+    <ul class="nav-links">
+      <li><a href="#ecosystem">Ecosystem</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#customize">Customize</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="https://github.com/Yoshiofthewire" target="_blank" rel="noopener">GitHub</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="rain-texture"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="status-pill">In active development — self-host today</span>
+        <h1>One inbox. Every device.<br><span>Zero third parties.</span></h1>
+        <p class="lede">KyPost is a self-hosted email ecosystem: a server you run yourself, paired with native apps for Android, iOS, macOS, and Linux — built around local AI sorting, PGP encryption, and themes that follow you everywhere.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/Yoshiofthewire" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn" href="#ecosystem">See how it connects</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/ky.png" alt="KyPost octopus mascot holding an envelope">
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem">
+    <div class="wrap">
+      <span class="eyebrow">How it fits together</span>
+      <h2>One server. Every client.</h2>
+      <p class="lede">KyPost isn't a single app — it's a self-hosted mail server plus a family of native clients that all pair to it the same way.</p>
+
+      <div class="hub">
+        <div class="hub-node hub-center">
+          <div class="hub-icon">SRV</div>
+          <div>
+            <h3>KyPost Server</h3>
+            <p>Runs on your own hardware. Connects to your real mailbox over IMAP/SMTP, classifies unread mail with a local Ollama model, and hands off mail, push, contacts, and PGP key exchange to every paired client.</p>
+          </div>
+        </div>
+
+        <div class="hub-arrow">▼ pairs once via QR code or deep link ▼</div>
+
+        <div class="hub-spokes">
+          <div class="hub-node">
+            <h3>Android</h3>
+            <p>Relay mode for zero on-device mail credentials, or connect directly over IMAP/SMTP when you'd rather skip the server.</p>
+          </div>
+          <div class="hub-node">
+            <h3>Mac &amp; iOS</h3>
+            <p>SwiftUI client that talks only to the relay — pair once, and mail, push, and contacts stay in lockstep with the server.</p>
+          </div>
+          <div class="hub-node">
+            <h3>Linux</h3>
+            <p>One Qt/Kirigami codebase for Linux Desktop, Plasma Mobile, and Ubuntu Touch — relay-only, just like the Apple client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platforms">
+    <div class="wrap">
+      <span class="eyebrow">Cross-platform</span>
+      <h2>Plays well with others</h2>
+      <p class="lede">Every surface shares the same pairing flow, the same 15 themes, and the same fonts — switching devices never means relearning the app.</p>
+
+      <div class="platform-grid">
+        <div class="platform-card">
+          <span class="tag">Kotlin · Native</span>
+          <h3>Android</h3>
+          <p>IMAP/SMTP or relay mode, keyword tabs, PGP key signing via QR, MFA push approval.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">SwiftUI · Relay</span>
+          <h3>iOS</h3>
+          <p>Pairs to your server once; native inbox, PGP QR key exchange, APNs push.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">SwiftUI · Relay</span>
+          <h3>macOS</h3>
+          <p>Same codebase as iOS — three-pane view, pop-out readers, menu-bar shortcuts.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">Qt / Kirigami · Relay</span>
+          <h3>Linux Desktop</h3>
+          <p>KDE Plasma sidebar layout, built from the same shared components as mobile.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">Qt / Kirigami · Relay</span>
+          <h3>Plasma Mobile</h3>
+          <p>Same mobile UI root as Ubuntu Touch — bottom tabs, swipe-to-archive and delete.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">Qt / Kirigami · Relay</span>
+          <h3>Ubuntu Touch</h3>
+          <p>Packaged as a Click for OpenStore, pixel-identical to Plasma Mobile.</p>
+        </div>
+        <div class="platform-card">
+          <span class="tag">Go + React · Server</span>
+          <h3>Web</h3>
+          <p>The server's own browser UI — config, logs, compose, and every theme, no install required.</p>
+        </div>
+      </div>
+
+      <p class="platform-note">Android is the one exception: it can also skip the server entirely and talk straight to your IMAP/SMTP provider — full flexibility if you don't want to self-host yet.</p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <span class="eyebrow">Privacy by default</span>
+      <h2>Encrypted when you can be, protected when you can't</h2>
+      <p class="lede">KyPost layers PGP encryption on top of a self-hosted core, and never falls back to sending plaintext when it doesn't have to.</p>
+
+      <div class="privacy-grid">
+        <div class="privacy-card">
+          <div class="step">01 — In person</div>
+          <h3>PGP, verified face to face</h3>
+          <p>Scan a contact's public key with your camera, confirm their fingerprint out loud, and every message to them is encrypted end-to-end from then on — Android and Mac/iOS both support this today.</p>
+        </div>
+        <div class="privacy-card">
+          <div class="step">02 — No key on file</div>
+          <h3>Secure pickup, not plaintext</h3>
+          <p>If a recipient doesn't have a PGP key yet, KyPost never sends the message body in the clear. It emails them a login link instead — the real content only unlocks after they sign in to the server.</p>
+        </div>
+        <div class="privacy-card">
+          <div class="step">03 — Under the hood</div>
+          <h3>Your server, your rules</h3>
+          <p>Mail lives on infrastructure you control, and unread-mail classification runs on a local Ollama model — no cloud AI provider ever sees your inbox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customize">
+    <div class="wrap">
+      <span class="eyebrow">Make it yours</span>
+      <h2>Categories, rules, and 15 themes — shared everywhere</h2>
+      <p class="lede">Every client speaks the same theme language, so the way you sort mail and the way it looks travels with you.</p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Categories</h3>
+          <p>Unread mail is auto-labeled by a local AI model and sorted into keyword tabs — no manual filing.</p>
+        </div>
+        <div class="pillar">
+          <h3>Rules</h3>
+          <p>Tune the classifier's prompt per user to change what counts as which category, right from the web UI.</p>
+        </div>
+        <div class="pillar">
+          <h3>Themes</h3>
+          <p>15 palettes, from Patina Ky to Cyber Punk, defined once and shared byte-for-byte across web, Android, Mac, iOS, and Linux.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="theme-demo-scroller">
+      <div class="theme-demo-sticky">
+        <div class="wrap">
+          <p class="theme-demo-caption">Scroll to preview the shared theme system — starting from the default, <strong>Patina Ky</strong></p>
+          <div class="theme-stage">
+            <div class="theme-layer t-patina-ky" data-layer="0">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Patina Ky</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+            <div class="theme-layer t-cyber-punk" data-layer="1">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Cyber Punk</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+            <div class="theme-layer t-ocean" data-layer="2">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Ocean</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+            <div class="theme-layer t-forest" data-layer="3">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Forest</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+            <div class="theme-layer t-sun" data-layer="4">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Sun</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+            <div class="theme-layer t-polished-ky" data-layer="5">
+              <div class="demo-sidebar">
+                <span class="demo-badge">Polished Ky</span>
+                <div class="demo-cat">Inbox</div>
+                <div class="demo-cat">Work</div>
+                <div class="demo-cat">Receipts</div>
+                <div class="demo-cat">Newsletters</div>
+              </div>
+              <div class="demo-main">
+                <div class="demo-row"><span class="who">Server</span><span class="subj">Health check passed on all pollers</span></div>
+                <div class="demo-row"><span class="who">A. Cho</span><span class="subj">Re: PGP key for the new laptop</span></div>
+                <div class="demo-row"><span class="who">Billing</span><span class="subj">Your receipt for July</span></div>
+                <span class="demo-compose">Compose</span>
+              </div>
+            </div>
+          </div>
+          <div class="theme-dots">
+            <span class="active"></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <span class="eyebrow">The repos</span>
+      <h2>Four projects, one ecosystem</h2>
+      <p class="lede">Everything is open source and under active development. Star, clone, or self-host any piece today.</p>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h3>KyPost Server</h3>
+              <span class="tech">Go · React · Docker</span>
+            </div>
+            <span class="status status-beta">Available Now — Early Beta</span>
+          </div>
+          <p>Self-hosted IMAP/SMTP web client with local-AI keyword labeling, multi-user roles, push relays for mobile, and a dozen+ shared themes.</p>
+          <a class="btn" href="https://github.com/Yoshiofthewire/KyPost-Server" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h3>KyPost for Android</h3>
+              <span class="tech">Kotlin</span>
+            </div>
+            <span class="status status-testing">Currently Testing</span>
+          </div>
+          <p>Native email client with IMAP/SMTP or relay mode, keyword inbox tabs, PGP key signing via QR, and MFA push approval.</p>
+          <a class="btn" href="https://github.com/Yoshiofthewire/KyPost-for-Android" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h3>KyPost for Mac &amp; iOS</h3>
+              <span class="tech">SwiftUI</span>
+            </div>
+            <span class="status status-testing">Currently Testing</span>
+          </div>
+          <p>One SwiftUI codebase for macOS and iOS — relay-only, with PGP QR key exchange, contact sync, and APNs push.</p>
+          <a class="btn" href="https://github.com/Yoshiofthewire/KyPost-for-Mac" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h3>KyPost for Linux</h3>
+              <span class="tech">Qt · Kirigami</span>
+            </div>
+            <span class="status status-dev">In Development</span>
+          </div>
+          <p>One Qt codebase, two UI roots — Linux Desktop, Plasma Mobile, and Ubuntu Touch, with UnifiedPush notifications.</p>
+          <a class="btn" href="https://github.com/Yoshiofthewire/KyPost-for-Linux" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 KyPost — GPL-2.0 licensed</span>
+    <a href="https://github.com/Yoshiofthewire" target="_blank" rel="noopener">github.com/Yoshiofthewire</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
