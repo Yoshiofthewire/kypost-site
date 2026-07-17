@@ -69,16 +69,16 @@
 
         <div class="hub-spokes">
           <div class="hub-node">
-            <h3>Android</h3>
-            <p>Relay mode for zero on-device mail credentials, or connect directly over IMAP/SMTP when you'd rather skip the server.</p>
-          </div>
-          <div class="hub-node">
             <h3>Mac &amp; iOS</h3>
             <p>SwiftUI client that talks only to the relay — pair once, and mail, push, and contacts stay in lockstep with the server.</p>
           </div>
           <div class="hub-node">
+            <h3>Android</h3>
+            <p>Kotlin client that is relay-only, just like the Apple client — zero mail credentials ever stored on-device.</p>
+          </div>
+          <div class="hub-node">
             <h3>Linux</h3>
-            <p>One Qt/Kirigami codebase for Linux Desktop, Plasma Mobile, and Ubuntu Touch — relay-only, just like the Apple client.</p>
+            <p>One Qt/Kirigami codebase for Linux Desktop, Plasma Mobile, and Ubuntu Touch — relay-only, just like the Apple and Android clients.</p>
           </div>
         </div>
       </div>
@@ -93,9 +93,9 @@
 
       <div class="platform-grid">
         <div class="platform-card">
-          <span class="tag">Kotlin · Native</span>
+          <span class="tag">Kotlin · Relay</span>
           <h3>Android</h3>
-          <p>IMAP/SMTP or relay mode, keyword tabs, PGP key signing via QR, MFA push approval.</p>
+          <p>Relay-only, keyword tabs, PGP key signing via QR, MFA push approval.</p>
         </div>
         <div class="platform-card">
           <span class="tag">SwiftUI · Relay</span>
@@ -129,7 +129,7 @@
         </div>
       </div>
 
-      <p class="platform-note">Android is the one exception: it can also skip the server entirely and talk straight to your IMAP/SMTP provider — full flexibility if you don't want to self-host yet.</p>
+      <p class="platform-note">Every client is relay-only: you pair once via QR code or deep link, and mail, push, and contacts flow through your own KyPost Server from then on.</p>
     </div>
   </section>
 
@@ -312,7 +312,7 @@
             </div>
             <span class="status status-testing">Currently Testing</span>
           </div>
-          <p>Native email client with IMAP/SMTP or relay mode, keyword inbox tabs, PGP key signing via QR, and MFA push approval.</p>
+          <p>Native, relay-only email client with keyword inbox tabs, PGP key signing via QR, and MFA push approval.</p>
           <a class="btn" href="https://github.com/Yoshiofthewire/KyPost-for-Android" target="_blank" rel="noopener">View on GitHub</a>
         </div>
 
