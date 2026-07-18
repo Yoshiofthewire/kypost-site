@@ -620,6 +620,12 @@ section {
   background: rgba(224, 171, 79, 0.08);
 }
 
+.status-alpha {
+  color: #8fd97a;
+  border-color: #3e6a2f;
+  background: rgba(143, 217, 122, 0.08);
+}
+
 .status-dev {
   color: var(--ink);
   border-color: var(--line);
